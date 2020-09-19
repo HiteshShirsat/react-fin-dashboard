@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Name=>React-Fin-Dashboard step1=> create an base rreact-project step2=>copy the public and src step3=>npm install redux,axios,redux-thunk step4=>ready to go:)
 
+Advantages:Class-Based Approach 2)redux 3)thunk 4)flux architechture 5)Responsive
+
+===========================if any Doubts regarding project===============Kindly Email==========================hiteshshirsat21@gmail.com=========================================
 ## Available Scripts
 
 In the project directory, you can run:
