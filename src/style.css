@@ -1,0 +1,306 @@
+@import url("p.css");
+
+
+::-webkit-scrollbar
+{
+	width:3px;
+}
+
+body
+{
+	margin:0;
+	background:#3a0839;
+	color:#f1e2d7;
+}
+*
+{
+	font-weight: normal;
+}
+big
+{
+	color:slateblue;
+}
+.loading
+{
+	width:50px;
+	height: 50px;
+	padding: 100px;
+	border-top:50px solid red;
+	border-left:50px solid green;
+	border-right:50px solid blue;
+	border-bottom:50px solid yellow;
+	border-radius: 100%;
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%) rotate(0deg) scale(0.5);
+	animation:loader 1s infinite linear;
+	box-shadow:0 0 10px black;
+	z-index: 3;
+}
+
+@keyframes loader
+{
+	from{transform: translate(-50%,-50%) rotate(0deg) scale(0.5);}
+	to{transform: translate(-50%,-50%) rotate(360deg) scale(0.5);}
+}
+
+body
+{
+	font-family:calibri;
+	/*background: #f1f1f1;*/
+}
+
+
+.error
+{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	text-align: center;
+	line-height: 100vh;
+	color:white;
+	font-family: calibri;
+	font-size: 3em;
+	z-index: 2;
+}
+
+
+.header 
+{
+	display: flex;
+	line-height: 10vh;
+	justify-content: space-between;
+	padding: 0 5%;
+	background:#4e214d;
+	color:#f64040;
+	align-items: center;
+}
+.header .head-title
+{
+	font-weight: bold;
+	font-size: 150%;
+}
+
+.header .logoname img
+{
+	width: 50%;
+}
+.header >div>div
+{
+	padding: 10px;
+}
+.header >div>.search
+{
+	background: white;
+	display: flex;
+	border-radius: 100px;
+	justify-content:center;
+	align-items: center;
+}
+.header >div>.search .fa
+{
+	margin-right: 10px;
+}
+.header >div>.search input
+{
+	border:0;
+	outline:0;
+	width: 300px;
+}
+.header .profile .fa
+{
+	display: flex;
+}
+
+
+.main
+{
+	height: 90vh;
+	display: flex;
+}
+.main .table
+{
+	width:70vw;
+	/*height:80vh;*/
+	overflow: auto;
+	/*background: white;*/
+	/*background:#4e214d;*/
+	color:#f64040;
+}
+.main .sidebar
+{
+	background: transparent !important;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	width:30vw;
+}
+
+.main .sidebar>div
+{
+	width:100%;
+}
+.main .table .list
+{
+	padding: 10px;
+	background:#2b062a;
+	color:white;
+	margin-bottom:2%;
+	display: flex;
+	align-items: center;
+	width:90%;
+	margin:2% auto;
+	justify-content: space-between;
+	padding:1%;
+	/*border-radius: 20px;*/
+	box-shadow:0 0 5px black;
+}
+.main .table .list>div
+{
+	width: 100%;
+	margin-right: 1%;
+	padding: 1px;
+	line-height: 22px;
+}
+
+
+.main .table .share
+{
+	display: flex;
+	margin-right: 4px;
+	align-items: center;
+	color:#ebc543;
+}
+.main .table	.share .share-item
+{
+	padding:1%;
+	margin:1%;
+}
+.main .table	.btn-group
+{
+	width:60% !important;
+}
+.main .table	.buy-btn,
+.main .table	.sell-btn
+{
+	padding: 10px;
+	cursor: pointer;
+	outline: 0;
+	background: #e91e63;
+	width:100%;
+	border:2px solid ;	
+	margin-bottom:4px;
+	border-color: #e91e63;
+	border-radius: 20px;
+	color:white;
+	font-family: verdana;
+	margin-bottom: 10px;
+}
+
+.main .table	.sell-btn
+{
+	background: orange;
+	color:black;
+	border-color: orange;
+}
+
+
+
+.main .table .list>div
+{
+	zoom:0.9;
+}
+
+.fa
+{
+	cursor: pointer;
+}
+
+.dropdown
+{
+	position: fixed;
+	top:10vh;
+	right:2vw;
+	background:#4e214d;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow:0 10px 10px black;
+	transform: translateX(200%);
+	transition: 0.5s;
+}
+
+.dropdown.active
+{
+	transform: translateX(0%);
+}
+.dropdown span
+{
+	display: block;
+	padding: 10px;
+	color:white;
+	cursor: pointer;
+}
+.dropdown span:hover
+{
+	color:#f64040;
+}
+
+.info
+{
+	text-align: left;
+	background:#2b062a;
+	color:white;
+	font-weight: bold;
+	padding: 20px;
+}
+.info .fa
+{
+	color: yellow
+
+}
+@media (max-width: 768px)
+{
+	.main .table .list
+	{
+		flex-flow: column;
+	}
+	.btn-group
+	{
+		padding: 20px;
+	}
+	.main .table	.buy-btn,
+	.main .table	.sell-btn
+	{
+		width:40%;
+	}
+	.main .table .list>div
+	{
+		width:90%;
+		margin:10px;
+	}
+	
+
+	.header >div>.search input,
+	.header >div>.search
+
+
+    {
+
+    	position: fixed;
+    	border-radius: 200px;
+    	top: 6.5%;
+    	left:2%;
+    	margin: 2px;
+    	padding: 3px;
+    	outline: none;
+    	width: 55%;
+    	border-top: 2px solid yellow;
+
+  
+    }
+
+}
